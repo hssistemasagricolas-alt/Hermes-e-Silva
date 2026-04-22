@@ -4,10 +4,8 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
   background: #facc15;
-  padding: 10px 20px;
+  border-bottom: 5px solid #0a2540;
 }
 
 .logo {
@@ -29,8 +27,8 @@ nav a {
 
 .banner {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc') center/cover;
-  height: 400px;
+  height: 500px;
+  background: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,23 +39,21 @@ nav a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: linear-gradient(to right, rgba(10,37,64,0.9), rgba(0,0,0,0.5));
 }
 
 .banner-content {
   position: relative;
   color: white;
-  text-align: center;
+  max-width: 600px;
+  text-align: left;
 }
 
 .btn {
   background: #facc15;
-  padding: 10px 20px;
-  border: none;
-  color: #0a2540;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
 }
 
 #pecas {
@@ -75,22 +71,19 @@ nav a {
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  width: 250px;
-  margin: 10px;
-  padding: 15px;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-.card img {
-  width: 100%;
+.card:hover {
+  transform: scale(1.05);
 }
 
 .modal {
