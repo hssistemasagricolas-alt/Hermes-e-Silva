@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>HS Sistemas Agrícolas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png">
+    <h2>HS Sistemas Agrícolas</h2>
+  </div>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#pecas">Peças</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-content">
+    <h1>Soluções que impulsionam sua colheita</h1>
+    <p>Peças de alta qualidade para o campo</p>
+
+    <a href="https://wa.me/5599999999999?text=Olá%20quero%20um%20orçamento" target="_blank" class="btn">
+      Solicite seu orçamento
+    </a>
+  </div>
+</section>
+
+<section id="pecas">
+
+  <h2>Catálogo de Peças</h2>
+
+  <div class="filtros">
+    <button onclick="filtrar('todas')">TODAS</button>
+    <button onclick="filtrar('case')">CASE</button>
+    <button onclick="filtrar('jd')">JOHN DEERE</button>
+    <button onclick="filtrar('tc')">TCs</button>
+    <button onclick="filtrar('mf')">MASSEY FERGUSON</button>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" data-categoria="case" onclick="abrirModal('Seção de Corte','Peça para corte preciso.')">
+      <img src="https://via.placeholder.com/200">
+      <h3>Seção de Corte</h3>
+      <button>Solicite seu orçamento</button>
+    </div>
+
+    <div class="card" data-categoria="jd" onclick="abrirModal('Engrenagem','Alta eficiência e resistência.')">
+      <img src="https://via.placeholder.com/200">
+      <h3>Engrenagem</h3>
+      <button>Solicite seu orçamento</button>
+    </div>
+
+    <div class="card" data-categoria="mf" onclick="abrirModal('Bomba Hidráulica','Alta potência.')">
+      <img src="https://via.placeholder.com/200">
+      <h3>Bomba Hidráulica</h3>
+      <button>Solicite seu orçamento</button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <span onclick="fecharModal()">X</span>
+    <h2 id="titulo"></h2>
+    <p id="descricao"></p>
+
+    <a href="https://wa.me/5599999999999?text=Olá%20quero%20um%20orçamento" target="_blank">
+      <button class="btn">Solicite seu orçamento</button>
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
